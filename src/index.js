@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';   
-import App from './app';
+// import Blog from './blog';
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+import Student from './Student';
+
+ReactDOM.render(<Student name = "jay prakash and wife is Sony"/>, document.getElementById('root'));
