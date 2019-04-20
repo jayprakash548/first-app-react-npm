@@ -17,7 +17,7 @@ class App extends Component{
 };
 export default App;
  */
-import React from 'react';
+/* import React from 'react';
 import Blog from './blog';
 
  const App = (props) =>{
@@ -30,4 +30,7 @@ import Blog from './blog';
         </div>
      );
  }
- export default App;
+ export default App; */
+
+
+ 
