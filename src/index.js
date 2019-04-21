@@ -1,8 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';   
-import Student from './Student';
+import ReactDOM from 'react-dom';
+import App from './App'   ;
 
-// import App from './App';
-// import Student from './Student';
-
-ReactDOM.render(<Student/>, document.getElementById('root'));
+ReactDOM.render(<App name="Jay"/>, document.getElementById('root'));
