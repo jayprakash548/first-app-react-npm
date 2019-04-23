@@ -1,22 +1,32 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class App extends Component {
     constructor(props){
         super(props);
+        // this.fun1 = this.fun1.bind(this);
         this.state = {
-            name: "Rahul",
-            city: this.props.city 
-        }
+            name:"Jay",
+            roll: this.props.roll
+        };
+        
     }
-    /* state = {
-        name: "Rahul",
-        city: this.props.city
+    /* fun1() {
+        console.log("You clicked", this);
     } */
+    
+    fun1 = () => {
+        console.log("You clicked", this);
+    }
     render(){
         return(
-            <h1>Hello {this.state.name}. Your city is {this.state.city}</h1>
+            <div>
+                <h1>Hello Jay!</h1>
+                <h2>{this.props.children}</h2>
+                <h3>Your roll is: {this.state.roll}</h3>
+                <button onClick={this.fun1}>Click Me</button>
+            </div>
         )
     }
 }
 
-export default App
+export default App;
