@@ -1,32 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class App extends Component {
-    constructor(props){
-        super(props);
-        // this.fun1 = this.fun1.bind(this);
-        this.state = {
-            name:"Jay",
-            roll: this.props.roll
-        };
-        
+const App = (props) =>{
+    const fun1 = (e) =>{
+        e.preventDefault();
+        console.log("You clicked");
     }
-    /* fun1() {
-        console.log("You clicked", this);
-    } */
-    
-    fun1 = () => {
-        console.log("You clicked", this);
-    }
-    render(){
-        return(
-            <div>
-                <h1>Hello Jay!</h1>
-                <h2>{this.props.children}</h2>
-                <h3>Your roll is: {this.state.roll}</h3>
-                <button onClick={this.fun1}>Click Me</button>
-            </div>
-        )
-    }
+    return(
+        <div>
+            <h1>Hello {props.name}</h1>
+            <a href="https://www.google.com" onClick = {fun1}>Anchor CLick</a>            
+        </div>
+    )
 }
 
 export default App;
