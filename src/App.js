@@ -1,16 +1,31 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const App = (props) =>{
-    const fun1 = (e) =>{
-        e.preventDefault();
-        console.log("You clicked");
+class App extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            name:"Jay",
+            roll: this.props.roll
+        }        
     }
-    return(
-        <div>
-            <h1>Hello {props.name}</h1>
-            <a href="https://www.google.com" onClick = {fun1}>Anchor CLick</a>            
-        </div>
-    )
+    fun1 = () => {
+        /* this.setState(
+            {
+                name: "Prakash", 
+                roll: "321"
+            }
+        ); */
+        this.setState((state, props) =>{
+            console.log(props.name);
+        })
+    }
+    render(){
+        return(
+            <div>
+                <h1>{this.state.name} and your roll is {this.state.roll}</h1>
+                <button onClick={this.fun1}>Click Me</button>
+            </div>
+        )
+    }
 }
-
 export default App;
